@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-type Foo = JSX.IntrinsicAttributes;
-
 ReactDOM.render(
   <React.StrictMode>
-    <App message="Hello, React!" />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
