@@ -1,17 +1,18 @@
 import React from 'react';
+import Counter from './Counter';
 
 interface AppProps {
   message?: string;
 }
 
-// Appコンポーネントに対する型チェック。
-const App: React.FunctionComponent<AppProps> = (
-  { message } /* 渡ってくるProps */
-) => {
-  return <div className="App">{message}</div>;
+const App: React.FunctionComponent<AppProps> = ({ message }) => {
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
-// 他のコンポーネントから情報が渡ってこなかった場合のPropsを設定できる。
 App.defaultProps = {
   message: 'Hello, defaultProps!',
 };
